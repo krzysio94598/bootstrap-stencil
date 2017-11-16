@@ -28,13 +28,13 @@
     <h1>Bootstrap Stencil</h1>
     <h2 class="text-muted">A collection of stencil web components built for Bootstrap v4+</h2>
     <div class="alert alert-warning">This is still very much a work in progress and is not in any way ready for usage yet.</div>
-    <bs-card card-title="Card Test" subtitle="A card doing card things" style="width: 350px" image-top="http://via.placeholder.com/350x150"
+    <bs-card class="d-none" card-title="Card Test" subtitle="A card doing card things" style="width: 350px" image-top="http://via.placeholder.com/350x150"
       image-bottom="http://via.placeholder.com/350x100" header="Hello!" footer="Bye!">
       <p>This is a card!</p>
       <bs-card-link url="http://google.com">Google</bs-card-link>
       <bs-card-link url="http://yahoo.com">Yahoo</bs-card-link>
     </bs-card>
-    <bs-card card-title="Bootstrap Alert">
+    <bs-card card-title="Bootstrap Alert" class="d-none">
       <bs-alert theme="primary">
         This is a primary alert—check it out!
       </bs-alert>
@@ -106,7 +106,7 @@
         <strong>Holy guacamole!</strong> You should check in on some of those fields below.
       </bs-alert>
     </bs-card>
-    <bs-card card-title="Bootstrap Badge">
+    <bs-card card-title="Bootstrap Badge" class="d-none">
       <h1>Example heading
         <bs-badge theme="secondary">New</bs-badge>
       </h1>
@@ -136,7 +136,7 @@
         <bs-badge theme="dark">Dark</bs-badge>
       </div>
     </bs-card>
-    <bs-card card-title="Bootstrap Breadcrumb">
+    <bs-card card-title="Bootstrap Breadcrumb" class="d-none">
       <bs-breadcrumb>
         <bs-breadcrumb-item active="true">Home</bs-breadcrumb-item>
       </bs-breadcrumb>
@@ -156,7 +156,7 @@
         <bs-breadcrumb-item active="true">Data</bs-breadcrumb-item>
       </bs-breadcrumb>
     </bs-card>
-    <bs-card card-title="Bootstrap Buttons">
+    <bs-card card-title="Bootstrap Buttons" class="d-none">
       <bs-button theme="primary">Primary</bs-button>
       <bs-button theme="secondary">Secondary</bs-button>
       <bs-button theme="success">Success</bs-button>
@@ -167,18 +167,146 @@
       <bs-button theme="dark">Dark</bs-button>
       <bs-button theme="link">Link</bs-button>
     </bs-card>
-    <bs-card card-title="Bootstrap Carousel">
+    <bs-card card-title="Bootstrap Carousel" class="d-none">
       <h3>Slides only</h3>
       <bs-carousel id="test2" interval="5000" with-indicators="true">
         <bs-carousel-item src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f5f08fd4f%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f5f08fd4f%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.45%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-          alt="First slide" active="true"><h2>Test</h2><p>this is a paragraph</p></bs-carousel-item>
+          alt="First slide" active="true">
+          <h2>Test</h2>
+          <p>this is a paragraph</p>
+        </bs-carousel-item>
         <bs-carousel-item src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f5f08fd53%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f5f08fd53%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.45%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
           alt="Second slide"></bs-carousel-item>
         <bs-carousel-item src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f5f08fd54%20text%20%7B%20fill%3A%23333%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f5f08fd54%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23555%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22277%22%20y%3D%22218.45%22%3EThird%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
           alt="Third slide"></bs-carousel-item>
-          <bs-carousel-item src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f5f08fd53%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f5f08fd53%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.45%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+        <bs-carousel-item src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15f5f08fd53%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15f5f08fd53%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23666%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22247.3203125%22%20y%3D%22218.45%22%3ESecond%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
           alt="Fourth slide"></bs-carousel-item>
       </bs-carousel>
+    </bs-card>
+    <bs-card card-title="Bootstrap Tooltip">
+      <bs-tooltip placement="top" title="Tooltip on top">
+        <button type="button" class="btn btn-secondary">
+          Tooltip on top
+        </button>
+      </bs-tooltip>
+      <bs-tooltip animation="false" placement="right" title="Tooltip on right">
+        <button type="button" class="btn btn-secondary">
+          Tooltip on right
+        </button>
+      </bs-tooltip>
+      <bs-tooltip placement="bottom" title="Tooltip on bottom">
+        <button type="button" class="btn btn-secondary">
+          Tooltip on bottom
+        </button>
+      </bs-tooltip>
+      <bs-tooltip placement="left" title="Tooltip on left">
+        <button type="button" class="btn btn-secondary">
+          Tooltip on left
+        </button>
+      </bs-tooltip>
+      <hr />
+      <bs-tooltip html title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+        <button type="button" class="btn btn-secondary">
+          Tooltip with HTML
+        </button>
+      </bs-tooltip>
+
+      <hr />
+      <p>Tight pants next level keffiyeh <bs-tooltip title="Default tooltip"><a href="#">you probably</a></bs-tooltip> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger
+        bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel have a terry richardson
+        vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko
+        mcsweeney's cleanse vegan chambray. A really ironic artisan whatever keytar, scenester farm-to-table banksy Austin
+        twitter handle freegan cred raw denim single-origin coffee viral.</p>
+        <hr />
+
+        <bs-button onclick="createTooltipExample(event)">add tooltip example</bs-button>
+        <div id="tooltipExampleContainer1">
+
+        </div>
+        <div id="tooltipExampleControls" class="d-none">
+          <bs-button onclick="tooltipExampleTest(event, 'hide')">hide</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'show')">show</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'toggle')">toggle</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'disable')">disable</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'enable')">enable</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'toggleEnabled')">toggle Enabled</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'update')">update</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'dispose')">dispose</bs-button>
+          <hr />
+          <bs-button onclick="tooltipExampleTest(event, 'placement-b')">placement-b</bs-button>
+          <bs-button onclick="tooltipExampleTest(event, 'placement-r')">placement-r</bs-button>
+        </div>
+
+        <script>
+          function createTooltipExample(event) {
+            event.preventDefault();
+            console.log('createTooltipExample');
+
+            const container = document.getElementById("tooltipExampleContainer1");
+
+            if (!container) {
+              return;
+            }
+
+            const el = document.createElement('bs-tooltip');
+
+            el.innerHTML = '<p><a href="#">I am a new tooltip that was created dynamically.</a></p>';
+            el.title = '<p>I am a new tooltip that was created dynamically.</p>';
+            el.id = "tooltipExample1";
+
+            container.appendChild(el);
+
+            const cdiv = document.getElementById("tooltipExampleControls");
+            cdiv.classList.remove('d-none');
+          }
+          function tooltipExampleTest(event, action) {
+            event.preventDefault();
+            const el = document.getElementById('tooltipExample1');
+
+            if (!el) {
+              console.log('el does not exist');
+              return;
+            }
+
+            switch (action) {
+              case 'disable':
+                el.disable();
+                break;
+              case 'dispose':
+                el.tooltipDispose();
+                break;
+              case 'enable':
+                el.enable();
+                break;
+              case 'hide':
+                el.tooltipHide();
+                break;
+              case 'placement-b':
+                console.log('el.placement BEFORE');
+                el.placement = "bottom";
+                console.log('el.placement AFTER');
+                break;
+              case 'placement-r':
+                console.log('el.placement BEFORE');
+                el.placement = "right";
+                console.log('el.placement AFTER');
+                break;
+              case 'show':
+                el.tooltipShow();
+                break;
+              case 'toggle':
+                el.toggle();
+                break;
+              case 'toggleEnabled':
+                el.toggleEnabled();
+                break;
+              case 'update':
+                el.update();
+                break;
+            }
+          }
+        </script>
+
     </bs-card>
   </div>
 </body>
