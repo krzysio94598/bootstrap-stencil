@@ -15,6 +15,9 @@ export class Tooltip {
   @Prop()
   delay: number | TooltipDelay;
 
+  @Prop()
+  disabled: boolean;
+
   @Element()
   element: HTMLElement;
 
@@ -23,6 +26,9 @@ export class Tooltip {
 
   @Prop()
   placement: string;
+
+  @Prop()
+  show: boolean;
 
   @Prop()
   title: string;
@@ -109,6 +115,12 @@ export class Tooltip {
   componentWillLoad() {
     this.updateProperties();
     this.tooltip();
+    if (this.show) {
+      this.tooltipShow();
+    }
+    if (this.disabled) {
+      this.disable();
+    }
   }
 
   render() {
