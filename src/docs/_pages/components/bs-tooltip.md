@@ -17,19 +17,41 @@ toc: true
 
 ### Static demo
 
+<bs-card card-title="Bootstrap Buttons">
+  <div>abc</div>
+  <bs-button theme="primary">Primary</bs-button>
+  <bs-button theme="secondary">Secondary</bs-button>
+  <bs-button theme="success">Success</bs-button>
+  <bs-button theme="danger">Danger</bs-button>
+  <bs-button theme="warning">Warning</bs-button>
+  <bs-button theme="info">Info</bs-button>
+  <bs-button theme="light">Light</bs-button>
+  <bs-button theme="dark">Dark</bs-button>
+  <bs-button theme="link">Link</bs-button>
+</bs-card>
+
 <p>Four options are available: top, right, bottom, and left aligned.</p>
 
-<bs-card>
-  <div style="height: 100px; width: 200px;">
-    <bs-tooltip placement="top" title="Tooltip on top" show disabled>
-    </bs-tooltip>
+<bs-card card-title="static demo">
+  <div class="flex" style="height: 100px;">
+    <div style="flex: 0 0 1;">
+      <bs-tooltip placement="top" title="Tooltip on top" show disabled>
+        <bs-button theme="primary">Primary</bs-button>
+      </bs-tooltip>
+    </div>
+    <div style="flex: 0 0 1;">
+      <bs-tooltip animation="false" placement="right" title="Tooltip on right" show disabled>
+      </bs-tooltip>
+    </div>
+    <div style="flex: 0 0 1;">
+      <bs-tooltip placement="bottom" title="Tooltip on bottom" show disabled>
+      </bs-tooltip>
+    </div>
+    <div style="flex: 0 0 1;">
+      <bs-tooltip placement="left" title="Tooltip on left" show disabled>
+      </bs-tooltip>
+    </div>
   </div>
-  <bs-tooltip animation="false" placement="right" title="Tooltip on right" show disabled>
-  </bs-tooltip>
-  <bs-tooltip placement="bottom" title="Tooltip on bottom" show disabled>
-  </bs-tooltip>
-  <bs-tooltip placement="left" title="Tooltip on left" show disabled>
-  </bs-tooltip>
 </bs-card>
 
 
