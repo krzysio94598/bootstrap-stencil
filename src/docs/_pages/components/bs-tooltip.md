@@ -17,46 +17,39 @@ toc: true
 
 ### Static demo
 
-<bs-card card-title="Bootstrap Buttons">
-  <div>abc</div>
-  <bs-button theme="primary">Primary</bs-button>
-  <bs-button theme="secondary">Secondary</bs-button>
-  <bs-button theme="success">Success</bs-button>
-  <bs-button theme="danger">Danger</bs-button>
-  <bs-button theme="warning">Warning</bs-button>
-  <bs-button theme="info">Info</bs-button>
-  <bs-button theme="light">Light</bs-button>
-  <bs-button theme="dark">Dark</bs-button>
-  <bs-button theme="link">Link</bs-button>
-</bs-card>
-
 <p>Four options are available: top, right, bottom, and left aligned.</p>
 
-<bs-card card-title="static demo">
-  <div class="flex" style="height: 100px;">
-    <div style="flex: 0 0 1;">
-      <bs-tooltip placement="top" title="Tooltip on top" show disabled>
-        <bs-button theme="primary">Primary</bs-button>
+{% example html %}
+<bs-card style="height: 160px; padding-top: 40px;">
+  <div style="display: flex;">
+    <div style="flex: 1 1 auto; text-align: center;">
+      <bs-tooltip placement="top" title="Tooltip on top" show disabled trigger="manual">
+        <bs-button></bs-button>
       </bs-tooltip>
     </div>
-    <div style="flex: 0 0 1;">
-      <bs-tooltip animation="false" placement="right" title="Tooltip on right" show disabled>
+    <div style="flex: 1 1 auto; text-align: center;">
+      <bs-tooltip animation="false" placement="right" title="Tooltip on right" show disabled trigger="manual">
+        <bs-button></bs-button>
       </bs-tooltip>
     </div>
-    <div style="flex: 0 0 1;">
-      <bs-tooltip placement="bottom" title="Tooltip on bottom" show disabled>
+    <div style="flex: 1 1 auto; text-align: center; ">
+      <bs-tooltip placement="bottom" title="Tooltip on bottom" show disabled trigger="manual">
+        <bs-button></bs-button>
       </bs-tooltip>
     </div>
-    <div style="flex: 0 0 1;">
-      <bs-tooltip placement="left" title="Tooltip on left" show disabled>
+    <div style="flex: 1 1 auto; text-align: center;">
+      <bs-tooltip placement="left" title="Tooltip on left" show disabled trigger="manual">
+        <bs-button></bs-button>
       </bs-tooltip>
     </div>
   </div>
 </bs-card>
+{% endexample %}
 
 
 ### Interactive demo
 
+{% example html %}
 <bs-card>
   <bs-tooltip placement="top" title="Tooltip on top">
     <button type="button" class="btn btn-secondary">
@@ -84,3 +77,4 @@ toc: true
     </button>
   </bs-tooltip>
 </bs-card>
+{% endexample %}

@@ -33,6 +33,9 @@ export class Tooltip {
   @Prop()
   title: string;
 
+  @Prop()
+  trigger: string;
+
   // @Method()
   tooltip(options?: TooltipOptions) {
     console.log('tooltip->tooltip', options);
@@ -151,6 +154,9 @@ export class Tooltip {
     }
     this.setProperty('data-toggle', 'tooltip');
     this.setProperty('title', this.title);
+    if (typeof this.trigger !== 'undefined') {
+      this.setProperty('data-trigger', this.trigger);
+    }
   }
 
   private setProperty(name: string, value: string) {
