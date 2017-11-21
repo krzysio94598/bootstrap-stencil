@@ -78,3 +78,39 @@ toc: true
   </bs-tooltip>
 </bs-card>
 {% endexample %}
+
+## Methods
+
+<h3>Asynchronous methods and transitions</h3>
+
+<p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
+
+el.tooltip(options);
+Attaches a tooltip handler to an element collection.
+
+el.showTooltip();
+Reveals an element’s tooltip. Returns to the caller before the tooltip has actually been shown (i.e. before the shown.bs.tooltip event occurs). This is considered a “manual” triggering of the tooltip. Tooltips with zero-length titles are never displayed.
+
+el.hideTooltip();
+Hides an element’s tooltip. Returns to the caller before the tooltip has actually been hidden (i.e. before the hidden.bs.tooltip event occurs). This is considered a “manual” triggering of the tooltip.
+
+el.toggle();
+Toggles an element’s tooltip. Returns to the caller before the tooltip has actually been shown or hidden (i.e. before the shown.bs.tooltip or hidden.bs.tooltip event occurs). This is considered a “manual” triggering of the tooltip.
+
+el.dispose();
+Hides and destroys an element’s tooltip. Tooltips that use delegation (which are created using the selector option) cannot be individually destroyed on descendant trigger elements.
+
+el.enable();
+Gives an element’s tooltip the ability to be shown. <strong>Tooltips are enabled by default</strong>.
+
+el.disable();
+Removes the ability for an element’s tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.
+
+el.toggleEnabled();
+Toggles the ability for an element’s tooltip to be shown or hidden.
+
+el.update();
+Updates the position of an element’s tooltip.
+
+
+## Events

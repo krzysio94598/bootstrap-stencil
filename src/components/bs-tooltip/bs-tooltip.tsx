@@ -25,6 +25,9 @@ export class Tooltip {
   html: boolean = false;
 
   @Prop()
+  offset: number | string;
+
+  @Prop()
   placement: string;
 
   @Prop()
@@ -156,6 +159,9 @@ export class Tooltip {
     this.setProperty('title', this.title);
     if (typeof this.trigger !== 'undefined') {
       this.setProperty('data-trigger', this.trigger);
+    }
+    if (typeof this.offset !== 'undefined') {
+      this.setProperty('data-offset', this.offset.toString());
     }
   }
 
